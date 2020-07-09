@@ -20,7 +20,6 @@ once you've set up a Twilio phone number, create a file called secrets.py like s
 
 and fill out the fields appropriately. `MY_PHONE_NUMBER` is the number that will be texted.
 
-In main.py, replace COURSE_URL with whatever UBC SSC link you want.
+In main.py, replace COURSE_URL with whatever UBC SSC link you want. <br>
 
-Be sure you have all the dependencies installed and then run the program.
-
+You can use "sudo python3 -m pip install -r requirements.txt" to install the required dependencies on Linux.

@@ -6,7 +6,7 @@ from twilio.rest import Client
 
 import secrets  # from secrets.py in this folder
 
-COURSE_URL = "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=344"
+COURSE_URL = "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-section&dept=MATH&course=344&section=101"
 
 def get_page_html(url):
     headers = {
@@ -20,6 +20,7 @@ def get_remaining_seats(page_html):
     tr_elem_list = list(soup.findAll("tr"))
     results = list(filter(lambda x: ("General Seats Remaining" in x.text or "Restricted Seats Remaining" in x.text), tr_elem_list))
     if len(results) < 2:
+        print("No registration numbers found. Is the url provided a UBC course section?")
         return None
     seats = {"General": int(re.findall('\d+', results[0].text)[0]),
              "Restricted": int(re.findall('\d+', results[1].text)[0])}
