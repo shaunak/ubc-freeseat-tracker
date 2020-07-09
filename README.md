@@ -8,10 +8,14 @@ You'll need a Twilio account: www.twilio.com/referral/KDkBss (this is my referra
 once you've set up a Twilio phone number, create a file called secrets.py like so
 
 `TWILIO_ACCOUNT_SID = ""
+
 TWILIO_AUTH_TOKEN = ""
+
 MY_PHONE_NUMBER = ""
+
 MY_TWILIO_NUMBER = ""
 `
+
 and fill out the fields appropriately. `MY_PHONE_NUMBER` is the number that will be texted.
 
 In main.py, replace COURSE_URL with whatever UBC SSC link you want.
