@@ -23,3 +23,6 @@ and fill out the fields appropriately. `MY_PHONE_NUMBER` is the number that will
 In main.py, replace COURSE_URL with whatever UBC SSC link you want. <br>
 
 You can use "sudo python3 -m pip install -r requirements.txt" to install the required dependencies on Linux.
+
+
+if you dont want to deal with all the setup on your own machine, here is a repl -> https://repl.it/@shaunakt/ubc-freeseat-tracker#README.md
