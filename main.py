@@ -6,6 +6,7 @@ from twilio.rest import Client
 
 import secrets  # from secrets.py in this folder
 
+COURSE_URL = "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=344"
 
 def get_page_html(url):
     headers = {
@@ -50,8 +51,7 @@ def send_notification(general=False, restricted=False):
 
 
 def check_course_available():
-    url = "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-section&dept=MATH&course=220&section=101"
-    page_html = get_page_html(url)
+    page_html = get_page_html(COURSE_URL)
     remaining_seats = get_remaining_seats(page_html)
     if remaining_seats["General"] != 0:
         send_notification(general=True)
