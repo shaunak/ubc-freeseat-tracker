@@ -1,4 +1,4 @@
-# course-freeseat-tracker
+# ubc-freeseat-tracker
 
 This was created because some departments dont do waitlists (MATH) and I wanted to take Math 344 (Game theory). <br>
 
